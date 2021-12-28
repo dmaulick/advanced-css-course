@@ -45,22 +45,75 @@ body {
   height: 35px;
 }
 
-.header-title {
+.text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.header-primary {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* Little hack to avoid weird shakiness on transform animations. (According to udemy people don't know why this happens...) */
+}
  
-.header-title-main {
+.header-primary-main {
   display: block;
   font-size: 75px;
+  font-weight: 400;
   letter-spacing: 25px;
-  text-transform: uppercase;
+
+  /* Animation properties */
+  animation: moveInFromLeft 1s ease-out;
+  /* ^shorthand for: */
+  /* animation-name: moveInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; */
+
+  /* Other unused but useful animation properties */
+  /* animation-delay: 2s;
+  animation-iteration-count: 3; */
 }
-.header-title-sub {
+
+.header-primary-sub {
   display: block;
   font-size: 20px;
+  font-weight: 700;
   letter-spacing: 18.2px;
-  text-transform: uppercase;
+
+  animation: moveInFromRight 1s ease-out;
+}
+
+
+@keyframes moveInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
