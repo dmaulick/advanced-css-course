@@ -22,8 +22,6 @@ body {
   padding: 30px;
 }
 
-
-
 .header {
   background-image: linear-gradient(
     to right bottom, 
@@ -35,4 +33,34 @@ body {
   background-position: top;
   /* clip-path property editor: https://bennettfeely.com/clippy/ */
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+}
+
+.logo-box {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.header-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+ 
+.header-title-main {
+  display: block;
+  font-size: 75px;
+  letter-spacing: 25px;
+  text-transform: uppercase;
+}
+.header-title-sub {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 18.2px;
+  text-transform: uppercase;
 }
