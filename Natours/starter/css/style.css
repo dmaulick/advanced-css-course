@@ -120,6 +120,8 @@ body {
   }
 }
 
+/* Pseudo *classes* use : (one colon) */
+
 .btn:link, 
 .btn:visited {
   text-decoration: none;
@@ -132,6 +134,8 @@ body {
   /* By default css changes occur immeditately. Transitions allow us to define exactly how and which css properties should change.*/
   /* transition: <property> <duration> <timing-function> <delay>; */
   transition: all .2s;
+
+  position: relative; /* to make children absolute position with respect to this */
 }
 
 .btn-white {
@@ -147,4 +151,47 @@ body {
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+/* Pseudo *elements* use :: (two colons) */
+.btn::after {
+  /* pseudo element is child of element so this is just base style to match original */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+
+  position: absolute; /* According to udemy absolute will use closest parent with relative position as its reference. */
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  transition: all .4s; /* Again for transitions we declare on initial state. Even for pseudo elements. */
+}
+
+.btn-white::after {
+  background-color: white;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInFromBottom .7s ease-in 1s;
+  animation-fill-mode: backwards; /* Automatically uses initial state of animation (in this case so that button is hidden at start). */
+}
+
+@keyframes moveInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
