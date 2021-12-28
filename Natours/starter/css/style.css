@@ -50,12 +50,14 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center; /* This aligns the button. Because it is a anchor tag */
 }
 
 .header-primary {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden; /* Little hack to avoid weird shakiness on transform animations. (According to udemy people don't know why this happens...) */
+  margin-bottom: 50px;
 }
  
 .header-primary-main {
@@ -116,4 +118,33 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.btn:link, 
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+
+  /* Confusing but transition must be declared on initial state. */
+  /* By default css changes occur immeditately. Transitions allow us to define exactly how and which css properties should change.*/
+  /* transition: <property> <duration> <timing-function> <delay>; */
+  transition: all .2s;
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
 }
