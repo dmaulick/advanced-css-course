@@ -23,7 +23,7 @@ Inheritence:
 ![image](./Natours/starter/img/slide_5.png)
 ![image](./Natours/starter/img/slide_6.png)
 
-How a website renders once css has been resvoled and process.
+# How a website renders once css has been resvoled and process.
 
 The visual formatting model:
 
@@ -34,6 +34,10 @@ The visual formatting model:
 ![image](./Natours/starter/img/slide_a4.png)
 ![image](./Natours/starter/img/slide_a5.png)
 ![image](./Natours/starter/img/slide_a6.png)
+
+# Sass
+
+![image](./Natours/starter/img/sass_1.png)
 
 # Course Material and FAQ for my Advanced CSS Course
 
