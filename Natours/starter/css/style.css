@@ -51,17 +51,17 @@ body {
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: relative;
   top: 2rem;
   left: 2rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -69,14 +69,14 @@ body {
   text-align: center; /* This aligns the button. Because it is a anchor tag */
 }
 
-.header-primary {
+.heading-primary {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden; /* Little hack to avoid weird shakiness on transform animations. (According to udemy people don't know why this happens...) */
   margin-bottom: 5rem;
 }
  
-.header-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 7.5rem;
   font-weight: 400;
@@ -94,7 +94,7 @@ body {
   animation-iteration-count: 3; */
 }
 
-.header-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -156,7 +156,7 @@ body {
   font-size: 1.6rem; /* Need to specify now that we are using rem */
 }
 
-.btn-white {
+.btn--white {
   background-color: white;
   color: #777;
 }
@@ -188,7 +188,7 @@ body {
   transition: all .4s; /* Again for transitions we declare on initial state. Even for pseudo elements. */
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: white;
 }
 
@@ -197,7 +197,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInFromBottom .7s ease-in 1s;
   animation-fill-mode: backwards; /* Automatically uses initial state of animation (in this case so that button is hidden at start). */
 }

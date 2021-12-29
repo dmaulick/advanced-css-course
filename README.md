@@ -23,6 +23,16 @@ Inheritence:
 ![image](./Natours/starter/img/slide_5.png)
 ![image](./Natours/starter/img/slide_6.png)
 
+How to render a website: The visual formatting model
+
+![image](./Natours/starter/img/slide_a0.png)
+![image](./Natours/starter/img/slide_a1.png)
+![image](./Natours/starter/img/slide_a2.png)
+![image](./Natours/starter/img/slide_a3.png)
+![image](./Natours/starter/img/slide_a4.png)
+![image](./Natours/starter/img/slide_a5.png)
+![image](./Natours/starter/img/slide_a6.png)
+
 # Course Material and FAQ for my Advanced CSS Course
 
 This repo contains starter files and the finished project files for all the projects contained in the course.
