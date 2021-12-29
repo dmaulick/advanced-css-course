@@ -1,0 +1,161 @@
+/* resets: */
+/* Universal selector - selected for every element */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* Better practice to do this to make all elements inherit top level box-sizing style. */
+  box-sizing: inherit; }
+
+/* Set root font-size */
+html {
+  /* Note: internet explorer does not support rem  ** so if you need to support old browsers - sad */
+  /* Using a percentage allows us to use rem and scale base on user preference too. */
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box; }
+
+.header {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  /* clip-path property editor: https://bennettfeely.com/clippy/ */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%); }
+
+.header__logo-box {
+  position: relative;
+  top: 2rem;
+  left: 2rem; }
+
+.header__logo {
+  height: 3.5rem; }
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* This aligns the button. Because it is a anchor tag */ }
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* Little hack to avoid weird shakiness on transform animations. (According to udemy people don't know why this happens...) */
+  margin-bottom: 5rem; }
+
+.heading-primary--main {
+  display: block;
+  font-size: 7.5rem;
+  font-weight: 400;
+  letter-spacing: 2.5rem;
+  /* Animation properties */
+  animation: moveInFromLeft 1s ease-out;
+  /* ^shorthand for: */
+  /* animation-name: moveInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; */
+  /* Other unused but useful animation properties */
+  /* animation-delay: 2s;
+  animation-iteration-count: 3; */ }
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.82rem;
+  animation: moveInFromRight 1s ease-out; }
+
+@keyframes moveInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/* Pseudo *classes* use : (one colon) */
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  /* Confusing but transition must be declared on initial state. */
+  /* By default css changes occur immeditately. Transitions allow us to define exactly how and which css properties should change.*/
+  /* transition: <property> <duration> <timing-function> <delay>; */
+  transition: all 0.2s;
+  position: relative;
+  /* to make children absolute position with respect to this */
+  font-size: 1.6rem;
+  /* Need to specify now that we are using rem */ }
+
+.btn--white {
+  background-color: white;
+  color: #777; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+/* Pseudo *elements* use :: (two colons) */
+.btn::after {
+  /* pseudo element is child of element so this is just base style to match original */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  /* According to udemy absolute will use closest parent with relative position as its reference. */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  /* Again for transitions we declare on initial state. Even for pseudo elements. */ }
+
+.btn--white::after {
+  background-color: white; }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn--animated {
+  animation: moveInFromBottom 0.7s ease-in 1s;
+  animation-fill-mode: backwards;
+  /* Automatically uses initial state of animation (in this case so that button is hidden at start). */ }
+
+@keyframes moveInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }

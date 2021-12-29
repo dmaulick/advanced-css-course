@@ -1,11 +1,9 @@
-/*
-COLORS:
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
+$color-gray-dark: #777;
+$color-white: #fff;
 
 /* resets: */
 
@@ -40,8 +38,8 @@ body {
 .header {
   background-image: linear-gradient(
       to right bottom,
-      rgb(126, 213, 111, 0.8),
-      rgb(40, 180, 133, 0.8)
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
     ),
     url("../img/hero.jpg");
   height: 95vh;
@@ -70,7 +68,7 @@ body {
 }
 
 .heading-primary {
-  color: white;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden; /* Little hack to avoid weird shakiness on transform animations. (According to udemy people don't know why this happens...) */
   margin-bottom: 5rem;
@@ -156,18 +154,18 @@ body {
 }
 
 .btn--white {
-  background-color: white;
-  color: #777;
+  background-color: $color-white;
+  color: $color-gray-dark;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 1rem 2rem rgb(0, 0, 0, 0.2);
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0px 0.5rem 1rem rgb(0, 0, 0, 0.2);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 /* Pseudo *elements* use :: (two colons) */
@@ -188,7 +186,7 @@ body {
 }
 
 .btn--white::after {
-  background-color: white;
+  background-color: $color-white;
 }
 
 .btn:hover::after {
