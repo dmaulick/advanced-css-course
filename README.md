@@ -23,7 +23,9 @@ Inheritence:
 ![image](./Natours/starter/img/slide_5.png)
 ![image](./Natours/starter/img/slide_6.png)
 
-How to render a website: The visual formatting model
+How a website renders once css has been resvoled and process.
+
+The visual formatting model:
 
 ![image](./Natours/starter/img/slide_a0.png)
 ![image](./Natours/starter/img/slide_a1.png)
