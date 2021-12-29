@@ -1,3 +1,28 @@
+# README
+
+I was a fan of these slides:
+
+![image](./Natours/starter/img/slide_1.png)
+
+![image](./Natours/starter/img/slide_2.png)
+
+We also want to use em and rem. This is because it gives us an easy way to scale lengths along with font-size (see pic below).
+
+em == "emphemeral unit"- see below for what it means in practice.
+em vs rem - rem is relative to root font-size.
+
+```
+Note: Below image is a bit confiusing because you need to match the numbers (x) to the css. But the math does work.
+```
+
+![image](./Natours/starter/img/slide_3.png)
+![image](./Natours/starter/img/slide_4.png)
+
+Inheritence:
+
+![image](./Natours/starter/img/slide_5.png)
+![image](./Natours/starter/img/slide_6.png)
+
 # Course Material and FAQ for my Advanced CSS Course
 
 This repo contains starter files and the finished project files for all the projects contained in the course.
