@@ -29,51 +29,46 @@ body {
   background-position: top;
   /* clip-path property editor: https://bennettfeely.com/clippy/ */
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%); }
-
-.header__logo-box {
-  position: relative;
-  top: 2rem;
-  left: 2rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /* This aligns the button. Because it is a anchor tag */ }
+  .header__logo-box {
+    position: relative;
+    top: 2rem;
+    left: 2rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* This aligns the button. Because it is a anchor tag */ }
 
 .heading-primary {
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   /* Little hack to avoid weird shakiness on transform animations. (According to udemy people don't know why this happens...) */
   margin-bottom: 5rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 7.5rem;
-  font-weight: 400;
-  letter-spacing: 2.5rem;
-  /* Animation properties */
-  animation: moveInFromLeft 1s ease-out;
-  /* ^shorthand for: */
-  /* animation-name: moveInFromLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; */
-  /* Other unused but useful animation properties */
-  /* animation-delay: 2s;
-  animation-iteration-count: 3; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.82rem;
-  animation: moveInFromRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 7.5rem;
+    font-weight: 400;
+    letter-spacing: 2.5rem;
+    /* Animation properties */
+    animation: moveInFromLeft 1s ease-out;
+    /* ^shorthand for: */
+    /* animation-name: moveInFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; */
+    /* Other unused but useful animation properties */
+    /* animation-delay: 2s;
+    animation-iteration-count: 3; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.82rem;
+    animation: moveInFromRight 1s ease-out; }
 
 @keyframes moveInFromLeft {
   0% {
@@ -113,7 +108,7 @@ body {
   /* Need to specify now that we are using rem */ }
 
 .btn--white {
-  background-color: white;
+  background-color: #fff;
   color: #777; }
 
 .btn:hover {
@@ -141,7 +136,7 @@ body {
   /* Again for transitions we declare on initial state. Even for pseudo elements. */ }
 
 .btn--white::after {
-  background-color: white; }
+  background-color: #fff; }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
