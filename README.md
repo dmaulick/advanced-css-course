@@ -1,5 +1,13 @@
 # README
 
+# How to run Natours Starter website (What I wrote)
+
+```
+cd Natours/starter/
+npm run compile:sass // compile sass
+live-server // Get hot reload - make sure live-server is installed globally
+```
+
 I was a fan of these slides:
 
 ![image](./Natours/starter/img/slide_1.png)
