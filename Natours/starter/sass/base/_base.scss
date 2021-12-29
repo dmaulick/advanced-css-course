@@ -1,0 +1,23 @@
+/* resets: */
+
+/* Universal selector - selected for every element */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  /* Better practice to do this to make all elements inherit top level box-sizing style. */
+  box-sizing: inherit;
+}
+
+/* Set root font-size */
+html {
+  /* Note: internet explorer does not support rem  ** so if you need to support old browsers - sad */
+  /* Using a percentage allows us to use rem and scale base on user preference too. */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}

@@ -1,0 +1,41 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* Little hack to avoid weird shakiness on transform animations. (According to udemy people don't know why this happens...) */
+  margin-bottom: 5rem;
+
+  &--main {
+    display: block;
+    font-size: 7.5rem;
+    font-weight: 400;
+    letter-spacing: 2.5rem;
+
+    /* Animation properties */
+    animation: moveInFromLeft 1s ease-out;
+    /* ^shorthand for: */
+    /* animation-name: moveInFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; */
+
+    /* Other unused but useful animation properties */
+    /* animation-delay: 2s;
+    animation-iteration-count: 3; */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.82rem;
+
+    animation: moveInFromRight 1s ease-out;
+  }
+}
