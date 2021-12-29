@@ -91,61 +91,54 @@ body {
     transform: translateX(0); } }
 
 /* Pseudo *classes* use : (one colon) */
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  /* Confusing but transition must be declared on initial state. */
-  /* By default css changes occur immeditately. Transitions allow us to define exactly how and which css properties should change.*/
-  /* transition: <property> <duration> <timing-function> <delay>; */
-  transition: all 0.2s;
-  position: relative;
-  /* to make children absolute position with respect to this */
-  font-size: 1.6rem;
-  /* Need to specify now that we are using rem */ }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-/* Pseudo *elements* use :: (two colons) */
-.btn::after {
-  /* pseudo element is child of element so this is just base style to match original */
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  /* According to udemy absolute will use closest parent with relative position as its reference. */
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-  /* Again for transitions we declare on initial state. Even for pseudo elements. */ }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
-.btn--animated {
-  animation: moveInFromBottom 0.7s ease-in 1s;
-  animation-fill-mode: backwards;
-  /* Automatically uses initial state of animation (in this case so that button is hidden at start). */ }
+.btn {
+  /* Pseudo *elements* use :: (two colons) */ }
+  .btn:link, .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    /* Confusing but transition must be declared on initial state. */
+    /* By default css changes occur immeditately. Transitions allow us to define exactly how and which css properties should change.*/
+    /* transition: <property> <duration> <timing-function> <delay>; */
+    transition: all 0.2s;
+    position: relative;
+    /* to make children absolute position with respect to this */
+    font-size: 1.6rem;
+    /* Need to specify now that we are using rem */ }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    /* pseudo element is child of element so this is just base style to match original */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    /* According to udemy absolute will use closest parent with relative position as its reference. */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    /* Again for transitions we declare on initial state. Even for pseudo elements. */ }
+  .btn--animated {
+    animation: moveInFromBottom 0.7s ease-in 1s;
+    animation-fill-mode: backwards;
+    /* Automatically uses initial state of animation (in this case so that button is hidden at start). */ }
 
 @keyframes moveInFromBottom {
   0% {
