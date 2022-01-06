@@ -96,3 +96,16 @@ flex-basis - base width. We use this to set flex items instead of width property
 flex - (ex: flex: 0 1 auto (\<int> \<int> \<len>)) - short hand for flex-grow flex-shrink flex-basis
 
 ![image](./Nexter/starter/img/flex_1.png)
+
+# CSS Grid Lessons
+
+Note: Firefox has best grid dev tools.
+
+Codepen set up for practicing: https://codepen.io/dmaul08/pen/BawVVLj
+
+![image](./Nexter/starter/img/grid_0_1.png)
+![image](./Nexter/starter/img/grid_0_2.png)
+![image](./Nexter/starter/img/grid_1.png)
+
+Screenshot of codepen that should trigger some memories of hwo to work with grid.
+![image](./Nexter/starter/img/grid_2.png)
